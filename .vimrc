@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged_extensions')
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
@@ -31,3 +32,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "Colorscheme / Visual config
 colorscheme molokai 
+
+" Airline Theme
+let g:airline_theme='wombat'
+
+" Misc Startup Scripts
+autocmd BufEnter __run__,__doc__ :wincmd L
