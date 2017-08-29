@@ -7,3 +7,7 @@ Just another vim configuration package.
     - Git clone to a location of choice
     - Create a sym-link from ~/.vim to the repo/.vim
     - Create a sym-link from ~/.vimrc to the repo/.vimrc
+
+# Common issues
+    
+    - For issues connecting with github, add local SSH keys
