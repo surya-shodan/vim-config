@@ -11,6 +11,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-commentary'
 Plug 'flazz/vim-colorschemes'
+Plug 'python-mode/python-mode'
 Plug 'https://github.com/hdima/python-syntax'
 
 " End the begin section of vim-plug
@@ -25,9 +26,9 @@ set expandtab
 syntax on
 
 " Code Fold Settings
-set foldmethod=indent
-set foldlevel=1
-set foldclose=all
+" set foldmethod=indent
+" set foldlevel=1
+" set foldclose=all
 
 " NERDTree configuration
 autocmd vimenter * NERDTree
@@ -36,6 +37,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "Colorscheme / Visual config
+set background=dark
+set t_Co=256
 colorscheme molokai 
 
 " Airline Theme
@@ -43,3 +46,6 @@ let g:airline_theme='wombat'
 
 " Misc Startup Scripts
 autocmd BufEnter __run__,__doc__ :wincmd L
+
+" Set line number
+set number
