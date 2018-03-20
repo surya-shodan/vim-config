@@ -12,7 +12,9 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-commentary'
 Plug 'flazz/vim-colorschemes'
 Plug 'python-mode/python-mode'
-Plug 'https://github.com/hdima/python-syntax'
+Plug 'hdima/python-syntax'
+Plug 'brooth/far.vim'
+Plug 'https://www.github.com/nvie/vim-flake8.git'
 
 " End the begin section of vim-plug
 call plug#end()
