@@ -11,7 +11,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-commentary'
 Plug 'flazz/vim-colorschemes'
-Plug 'python-mode/python-mode'
+" Plug 'python-mode/python-mode'
 Plug 'hdima/python-syntax'
 Plug 'brooth/far.vim'
 Plug 'https://www.github.com/nvie/vim-flake8.git'
@@ -51,3 +51,4 @@ autocmd BufEnter __run__,__doc__ :wincmd L
 
 " Set line number
 set number
+set relativenumber
