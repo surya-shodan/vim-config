@@ -15,6 +15,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'hdima/python-syntax'
 Plug 'brooth/far.vim'
 Plug 'https://www.github.com/nvie/vim-flake8.git'
+Plug 'https://github.com/tpope/vim-rhubarb.git'
 
 " End the begin section of vim-plug
 call plug#end()
@@ -26,6 +27,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 syntax on
+set colorcolumn=80
+let python_highlight_all = 1
 
 " Code Fold Settings
 " set foldmethod=indent
@@ -41,7 +44,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "Colorscheme / Visual config
 set background=dark
 set t_Co=256
-colorscheme molokai 
+" colorscheme molokai 
+colorscheme Benokai
 
 " Airline Theme
 let g:airline_theme='wombat'
@@ -52,3 +56,11 @@ autocmd BufEnter __run__,__doc__ :wincmd L
 " Set line number
 set number
 set relativenumber
+
+"Set Leader Key
+let mapleader="<Space>"
+set showcmd
+
+
+" Settings for jedi-vim
+let g:jedi#popup_on_dot=0
