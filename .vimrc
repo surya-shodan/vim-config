@@ -11,12 +11,15 @@ Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-commentary'
 Plug 'flazz/vim-colorschemes'
-" Plug 'python-mode/python-mode'
-Plug 'hdima/python-syntax'
+Plug 'https://github.com/vim-python/python-syntax'
 Plug 'brooth/far.vim'
-Plug 'https://www.github.com/nvie/vim-flake8.git'
 Plug 'https://github.com/tpope/vim-rhubarb.git'
+Plug 'w0rp/ale'
+Plug 'mhinz/vim-startify'
 
+" Plug 'https://www.github.com/nvie/vim-flake8.git'
+" Plug 'python-mode/python-mode'
+" Plug 'hdima/python-syntax'
 " End the begin section of vim-plug
 call plug#end()
 
@@ -28,7 +31,9 @@ set shiftwidth=4
 set expandtab
 syntax on
 set colorcolumn=80
-let python_highlight_all = 1
+
+" let python_highlight_all = 1
+let g:python_highlight_all = 1
 
 " Code Fold Settings
 " set foldmethod=indent
@@ -41,9 +46,10 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"Colorscheme / Visual config
+" colorscheme / Visual config
 set background=dark
 set t_Co=256
+
 " colorscheme molokai 
 colorscheme Benokai
 
@@ -61,6 +67,14 @@ set relativenumber
 let mapleader="<Space>"
 set showcmd
 
-
 " Settings for jedi-vim
 let g:jedi#popup_on_dot=0
+
+" ALE Linting
+let g:ale_linters = {
+\   'python': ['pylint'],
+\}
+
+let b:ale_fixers = ['autopep8']
+" Disable warnings about trailing whitespace for Python files.
+let b:ale_warn_about_trailing_whitespace = 0
