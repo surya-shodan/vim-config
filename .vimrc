@@ -16,6 +16,10 @@ Plug 'brooth/far.vim'
 Plug 'https://github.com/tpope/vim-rhubarb.git'
 Plug 'w0rp/ale'
 Plug 'mhinz/vim-startify'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'junegunn/vim-easy-align'
+Plug 'plytophogy/vim-virtualenv'
+
 
 " Plug 'https://www.github.com/nvie/vim-flake8.git'
 " Plug 'python-mode/python-mode'
@@ -70,11 +74,21 @@ set showcmd
 " Settings for jedi-vim
 let g:jedi#popup_on_dot=0
 
-" ALE Linting
+" ALE Config
 let g:ale_linters = {
 \   'python': ['pylint'],
 \}
-
-let b:ale_fixers = ['autopep8']
+let g:ale_fixers = ['autopep8']
 " Disable warnings about trailing whitespace for Python files.
 let b:ale_warn_about_trailing_whitespace = 0
+
+" Set Indent markers
+let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_guide_size            = 1
+let g:indent_guides_start_level           = 2
+
+" EasyAlign Plugin
+"   Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+"   Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
