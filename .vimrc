@@ -1,6 +1,9 @@
-" Instruction to refer to vim-plug plugin manager
+" Set Leader Key
+let mapleader = ","
+set showcmd
 call plug#begin('~/.vim/plugged_extensions')
 
+" Vim-Plug
 " List the plugins, with github shorthand version [author/gitrepo]
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
@@ -28,7 +31,6 @@ Plug 'plytophogy/vim-virtualenv'
 call plug#end()
 
 """
-
 " Python specific configuration
 set tabstop=4
 set shiftwidth=4
@@ -50,6 +52,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+nmap <leader>ne :NERDTreeToggle<cr>
+
 " colorscheme / Visual config
 set background=dark
 set t_Co=256
@@ -66,10 +70,6 @@ autocmd BufEnter __run__,__doc__ :wincmd L
 " Set line number
 set number
 set relativenumber
-
-"Set Leader Key
-let mapleader="<Space>"
-set showcmd
 
 " Settings for jedi-vim
 let g:jedi#popup_on_dot=0
@@ -92,3 +92,9 @@ let g:indent_guides_start_level           = 2
 xmap ga <Plug>(EasyAlign)
 "   Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Working with Tabs
+nmap <leader>t :tabe<cr>
+nmap <F7> :tabp<cr>
+nmap <F8> :tabn<cr>
+nmap <F7> :tabp<cr>
