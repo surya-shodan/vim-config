@@ -95,6 +95,5 @@ nmap ga <Plug>(EasyAlign)
 
 " Working with Tabs
 nmap <leader>t :tabe<cr>
-nmap <F7> :tabp<cr>
-nmap <F8> :tabn<cr>
-nmap <F7> :tabp<cr>
+nmap <Left> :tabp<cr>
+nmap <Right> :tabn<cr>
