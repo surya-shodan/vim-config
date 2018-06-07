@@ -2,11 +2,9 @@
 
 Just another vim configuration package. Runs on Vim v8.0
 
-    ~~~~
     sudo add-apt-repository ppa:jonathonf/vim
     sudo apt update
     sudo apt install vim
-    ~~~~
 
 # Set-up instructions
     - Git clone to a location of choice
