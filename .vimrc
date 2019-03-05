@@ -22,11 +22,14 @@ Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/vim-easy-align'
 Plug 'plytophogy/vim-virtualenv'
+Plug 'sfi0zy/atlantic-dark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'freeo/vim-kalisi'
+Plug 'tpope/vim-surround'
+Plug 'dracula/vim',{'as':'dracula'}
 
 
-" Plug 'https://www.github.com/nvie/vim-flake8.git'
-" Plug 'python-mode/python-mode'
-" Plug 'hdima/python-syntax'
 " End the begin section of vim-plug
 call plug#end()
 
@@ -38,16 +41,16 @@ set expandtab
 syntax on
 set colorcolumn=80
 
-" let python_highlight_all = 1
 let g:python_highlight_all = 1
 
 " Code Fold Settings
-" set foldmethod=indent
-" set foldlevel=1
+set foldmethod=indent
+set foldlevel=1
 " set foldclose=all
+filetype indent plugin on
 
 " NERDTree configuration
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -55,11 +58,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nmap <leader>ne :NERDTreeToggle<cr>
 
 " colorscheme / Visual config
-set background=dark
-set t_Co=256
+" set background=dark
+" set t_Co=256
 
-" colorscheme molokai 
-colorscheme Benokai
+" colorscheme gruvbox
+colorscheme dracula 
 
 " Airline Theme
 let g:airline_theme='wombat'
@@ -76,7 +79,7 @@ let g:jedi#popup_on_dot=0
 
 " ALE Config
 let g:ale_linters = {
-\   'python': ['pylint'],
+\   'python': ['black'],
 \}
 let g:ale_fixers = ['autopep8']
 " Disable warnings about trailing whitespace for Python files.
