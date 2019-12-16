@@ -28,6 +28,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'freeo/vim-kalisi'
 Plug 'tpope/vim-surround'
 Plug 'dracula/vim',{'as':'dracula'}
+Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'liuchengxu/vista.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'joshdick/onedark.vim'
 
 
 " End the begin section of vim-plug
@@ -62,8 +66,8 @@ nmap <leader>ne :NERDTreeToggle<cr>
 " set background=dark
 " set t_Co=256
 
-" colorscheme gruvbox
-colorscheme dracula 
+" colorscheme dracula 
+colorscheme onedark
 
 " Airline Theme
 let g:airline_theme='wombat'
@@ -76,15 +80,16 @@ set number
 set relativenumber
 
 " Settings for jedi-vim
-let g:jedi#popup_on_dot=0
+let g:jedi#popup_on_dot=1
 
 " ALE Config
 let g:ale_linters = {
-\   'python': ['black'],
+\   'python': ['pylint'],
 \}
 let g:ale_fixers = ['autopep8']
 " Disable warnings about trailing whitespace for Python files.
 let b:ale_warn_about_trailing_whitespace = 0
+let g:airline#extensions#ale#enabled = 1
 
 " Set Indent markers
 let g:indent_guides_enable_on_vim_startup = 0
