@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged_extensions')
 " Vim-Plug
 " List the plugins, with github shorthand version [author/gitrepo]
 Plug 'tpope/vim-fugitive'
+Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -32,6 +33,8 @@ Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'liuchengxu/vista.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 " End the begin section of vim-plug
@@ -63,11 +66,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nmap <leader>ne :NERDTreeToggle<cr>
 
 " colorscheme / Visual config
-" set background=dark
-" set t_Co=256
+set background=dark
+set t_Co=256
 
-" colorscheme dracula 
-colorscheme onedark
+colorscheme dracula 
+" colorscheme onedark
 
 " Airline Theme
 let g:airline_theme='wombat'
