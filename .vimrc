@@ -1,10 +1,10 @@
 " Set Leader Key
-let mapleader = ","
+let mapleader = "\<space>"
 set showcmd
 call plug#begin('~/.vim/plugged_extensions')
 
 " Vim-Plug
-" List the plugins, with github shorthand version [author/gitrepo]
+" List the plugins, with github shorthand [author/gitrepo]
 Plug 'tpope/vim-fugitive'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
@@ -35,6 +35,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
 
 
 " End the begin section of vim-plug
@@ -63,7 +64,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-nmap <leader>ne :NERDTreeToggle<cr>
+nmap <leader><tab> :NERDTreeToggle<cr>
 
 " colorscheme / Visual config
 set background=dark
@@ -109,3 +110,22 @@ nmap ga <Plug>(EasyAlign)
 nmap <leader>t :tabe<cr>
 nmap <Left> :tabp<cr>
 nmap <Right> :tabn<cr>
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+" Fuzzy Search
+nmap <leader>f :Ag<cr>
+
+
+" QOL shortcuts
+nmap <leader>q :q<cr>
+nmap <leader>w :w<cr>
