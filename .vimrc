@@ -26,7 +26,7 @@ Plug 'plytophogy/vim-virtualenv'
 Plug 'sfi0zy/atlantic-dark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
-Plug 'freeo/vim-kalisi'
+" Plug 'freeo/vim-kalisi'
 Plug 'tpope/vim-surround'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'jeetsukumaran/vim-pythonsense'
