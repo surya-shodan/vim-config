@@ -129,4 +129,3 @@ nmap <leader>f :Ag<cr>
 " QOL shortcuts
 nmap <leader>q :q<cr>
 nmap <leader>w :w<cr>
-
