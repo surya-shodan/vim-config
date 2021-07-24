@@ -21,3 +21,4 @@ Just another vim configuration package. Runs on Vim v8.0
 
 # Common issues
     - For issues connecting with github, add local SSH keys
+

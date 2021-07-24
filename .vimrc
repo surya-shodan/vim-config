@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-commentary'
 Plug 'flazz/vim-colorschemes'
@@ -59,7 +59,7 @@ filetype indent plugin on
 
 " NERDTree configuration
 " autocmd vimenter * NERDTree
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
