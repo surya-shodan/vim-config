@@ -14,7 +14,7 @@ Plug 'kien/ctrlp.vim'
 " Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-commentary'
-Plug 'flazz/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
 Plug 'https://github.com/vim-python/python-syntax'
 Plug 'brooth/far.vim'
 Plug 'https://github.com/tpope/vim-rhubarb.git'
@@ -70,8 +70,8 @@ nmap <leader><tab> :NERDTreeToggle<cr>
 set background=dark
 set t_Co=256
 
-colorscheme dracula 
-" colorscheme onedark
+" colorscheme dracula 
+colorscheme onedark
 
 " Airline Theme
 let g:airline_theme='wombat'
