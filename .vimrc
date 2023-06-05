@@ -71,7 +71,7 @@ set background=dark
 set t_Co=256
 
 " colorscheme dracula 
-colorscheme onedark
+colorscheme gruvbox 
 
 " Airline Theme
 let g:airline_theme='wombat'
