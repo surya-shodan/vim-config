@@ -36,7 +36,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
-
+Plug 'ayu-theme/ayu-vim'
 
 " End the begin section of vim-plug
 call plug#end()
@@ -71,7 +71,11 @@ set background=dark
 set t_Co=256
 
 " colorscheme dracula 
-colorscheme gruvbox 
+" colorscheme gruvbox 
+
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 
 " Airline Theme
 let g:airline_theme='wombat'
